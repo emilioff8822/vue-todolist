@@ -20,7 +20,7 @@
 <!-- Lista dei task -->
 <ul>
 <!-- Ciclo sui task presenti nell'array "tasks" -->
-<li v-for="(task, index) in tasks" :key="index" :class="{'done': task.done}" @click=""task.done =!task.done>
+<li v-for="(task, index) in tasks" :key="index" :class="{'done': task.done}" @click="task.done =!task.done">
 <!-- Testo del task -->
 {{task.text}}
 <!-- Bottone per rimuovere un task -->
