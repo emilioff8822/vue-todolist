@@ -89,7 +89,10 @@
     background-color: red;
   }
 
- 
+  .task-text {
+    display: flex;
+    align-items: center;
+  }
 
 .task-text.done {
   text-decoration: line-through;
