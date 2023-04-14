@@ -1,30 +1,14 @@
-const {createApp}= Vue;
-createApp ({
+const { createApp } = Vue;
 
-data (){
-
-return {
-
-
-
-};  
-
-
-
-},
-
-methods: {
+createApp({
+  data() {
+    return {
+      newTask: "",
+      tasks: [],
+      errorMsg: "",
+    };
+  },
 
   
+}).mount("#app");
 
-
-
-},
-
-mounted(){
-
-
-
-}
-
-}).mount("#app")
