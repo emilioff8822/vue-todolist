@@ -53,14 +53,13 @@
   
   li {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   background-color: #eee; 
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
-  height: 40px;
   }
   
   /* Stile del testo dei task completati */
@@ -74,21 +73,23 @@
     margin-bottom: 1rem;
   }
   .delete-btn {
-  color: #fff;
-  background-color: #808080 ;  
-  border: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #808080;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
   }
   
   .delete-btn:hover {
     background-color: red;
   }
 
-
+ 
 
 .task-text.done {
   text-decoration: line-through;
