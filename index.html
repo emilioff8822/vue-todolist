@@ -19,13 +19,16 @@
 
 <!-- Lista dei task -->
 <ul>
-<!-- Ciclo sui task presenti nell'array "tasks" -->
-<li v-for="(task, index) in tasks" :key="index" :class="{'done': task.done}" @click="task.done =!task.done">
-<!-- Testo del task -->
-{{task.text}}
-<!-- Bottone per rimuovere un task -->
-<button class="delete-btn"@click.stop ="removeTask(index)" >x</button>
-</li>
+        <!-- Ciclo sui task presenti nell'array "tasks" -->
+
+  <li v-for="(task, index) in tasks" :key="index">
+    <div class="task-content" @click="task.done = !task.done">
+     
+      <span :class="{ 'task-text': true, 'done': task.done }">{{ task.text }}</span>
+    
+    </div>
+    <button class="delete-btn" @click.stop="removeTask(index)">x</button>
+  </li>
 </ul>
 <!-- Messaggio visualizzato se non ci sono task -->
 <h2 v-if="tasks.length === 0"> Non ci sono task</h2>
