@@ -1,29 +1,36 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f0f0f0;
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #fff;
+padding: 4rem;
+border-radius: 10px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+/* Stile del campo di input */
+
+input{
+border: 1px solid #ccc;  
+border-radius: 5px;
+padding: 0.5rem;
+width: 100%;
+margin-bottom: 1rem;
 }
 
-input[type="text"] {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5rem;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
-}
-
+/* Stile del bottone per aggiungere un task */

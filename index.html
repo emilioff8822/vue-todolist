@@ -6,13 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js" integrity="sha512-DJ2+sosWB5FnZAIeCWAHu2gxQ7Gi438oOZLcBQSOrW8gD0s7LIXDv/5RW76B3FcljF40BXnfqNIo6Dhp7dFHJg==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <title>FATTO</title>
+  <title>todo vue</title>
 </head>
 <body>
   <div id="app">
-    <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Scrivi un task...">
-    <button @click="addTask">Aggiungi</button>
-    <p class="error" v-if="errorMsg">{{ errorMsg }}</p>
+  <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Scrivi un task...">  
+
+<!-- Bottone per aggiungere un nuovo task -->
+<button @click="addTask">Aggiungi</button>
+<!-- Messaggio d'errore, se presente -->
+<p class="error" v-if="errorMsg">{{errorMsg}}</p>
+
+<!-- Lista dei task -->
+<ul>
+<!-- Ciclo sui task presenti nell'array "tasks" -->
+<li v-for="(task, index) in tasks" :key="index" :class="{'done': task.done}" @click=""task.done =!task.done>
+<!-- Testo del task -->
+{{task.text}}
+<!-- Bottone per rimuovere un task -->
+<button class="delete-btn"@click.stop ="removeTask(index)" >x</button>
+</li>
+</ul>
+<!-- Messaggio visualizzato se non ci sono task -->
+<h2 v-if="tasks.length === 0"> Non ci sono task</h2>
+
+  
     
   </div>
   <script src="js/script.js"></script>
